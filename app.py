@@ -1,9 +1,11 @@
 from flask import Flask
+from SEND_DATA_TO_THINGSPEAK import run
+
 app = Flask(__name__)
 
 @app.route('/')
 def run_script():
-    # Import your script as a module and call a function from it
+    run()
     import SEND_DATA_TO_THINGSPEAK
     SEND_DATA_TO_THINGSPEAK.your_function()
     return "Script has been run!"

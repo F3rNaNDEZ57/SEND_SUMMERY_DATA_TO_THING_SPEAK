@@ -1,8 +1,7 @@
-gspread=={version_number}
-google-auth=={version_number}
+gspread==5.10.0
+google-auth==2.21.0
 statsmodels==0.12.2
 numpy==1.21.2
 pandas==1.3.2
-neuralprophet=={version_number}
 matplotlib==3.4.3
 requests==2.31.0

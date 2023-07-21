@@ -13,7 +13,6 @@ from statsmodels.tsa.stattools import adfuller
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-import pickle
 
 # Assume 'json_content' is a string containing your JSON data.
 json_content = """

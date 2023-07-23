@@ -1,16 +1,15 @@
 from flask import Flask
+import os.path
+import gspread
+import json
+from google.oauth2.service_account import Credentials
+import requests
+import pandas as pd
 
 app = Flask(__name__)
 
 @app.route('/run-script')
 def run_script():
-      import os.path
-      import gspread
-      import json
-      from google.oauth2.service_account import Credentials
-      import requests
-      import pandas as pd
-      
       # Assume 'json_content' is a string containing your JSON data.
       json_content = """
       {

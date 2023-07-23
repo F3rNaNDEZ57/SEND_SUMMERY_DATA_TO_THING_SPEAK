@@ -9,11 +9,7 @@ def run():
   import gspread
   import json
   from google.oauth2.service_account import Credentials
-  from statsmodels.tsa.api import VAR
-  from statsmodels.tsa.stattools import adfuller
-  import numpy as np
   import pandas as pd
-  from matplotlib import pyplot as plt
   
   # Assume 'json_content' is a string containing your JSON data.
   json_content = """

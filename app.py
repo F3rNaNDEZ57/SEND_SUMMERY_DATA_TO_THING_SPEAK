@@ -1,14 +1,16 @@
 from flask import Flask
-from SEND_DATA_TO_THINGSPEAK import run
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/run-script')
 def run_script():
-    run()
-    import SEND_DATA_TO_THINGSPEAK
-    SEND_DATA_TO_THINGSPEAK.your_function()
-    return "Script has been run!"
+    # Your existing script here.
+    # ...
+
+    if response.status_code == 200:
+        return 'Data sent to ThingSpeak successfully'
+    else:
+        return 'Failed to send data to ThingSpeak'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=5000)

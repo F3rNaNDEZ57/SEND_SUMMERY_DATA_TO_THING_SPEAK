@@ -44,6 +44,7 @@ def run_script():
       # print(last_records)
       
       raw_weather_df = pd.DataFrame(last_records)
+      raw_weather_df['LUX'] = pd.to_numeric(raw_weather_df['LUX'], errors='coerce')
       print(raw_weather_df)
       
       # Calculate averages

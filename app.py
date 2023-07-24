@@ -58,6 +58,9 @@ def run_script():
       
       # Calculate modes
       rain_status_mode = raw_weather_df['RAINSTATUS'].mode()[0]
+      mapping = {'N': 1, 'E': 2, 'S': 3, 'W': 4}
+      raw_weather_df['WIND DIRECTION'] = raw_weather_df['WIND DIRECTION'].replace(mapping)
+
       wind_direction_mode = raw_weather_df['WIND DIRECTION'].mode()[0]
       
       # ThingSpeak settings
